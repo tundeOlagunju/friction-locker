@@ -117,23 +117,12 @@ function Brand({ compact = false }: { compact?: boolean }) {
   );
 }
 
-function Header({
-  onHome,
-  onBackups,
-}: {
-  onHome: () => void;
-  onBackups: () => void;
-}) {
+function Header({ onHome }: { onHome: () => void }) {
   return (
     <header className="app-header">
       <button className="brand-button" type="button" onClick={onHome}>
         <Brand compact />
       </button>
-      <nav aria-label="Vault navigation">
-        <button className="text-button" type="button" onClick={onBackups}>
-          Backup
-        </button>
-      </nav>
     </header>
   );
 }
@@ -627,10 +616,6 @@ export default function Home() {
     <main className="app-shell">
       <Header
         onHome={goHome}
-        onBackups={() => {
-          resetMessages();
-          setView("backups");
-        }}
       />
 
       {(error || notice) && (
