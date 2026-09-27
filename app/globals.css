@@ -907,12 +907,19 @@ p {
 .number-grid {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  gap: 5px;
-  padding: 18px;
-  border: 1px solid rgba(23, 36, 30, 0.12);
-  border-radius: 20px;
-  background: #f4f0e7;
-  box-shadow: inset 0 1px 2px rgba(23, 36, 30, 0.04);
+  gap: 3px;
+  padding: 12px;
+  border: 1px solid rgba(23, 36, 30, 0.18);
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, rgba(25, 59, 45, 0.06) 25%, transparent 25%) 0 0 / 10px
+      10px,
+    linear-gradient(45deg, rgba(237, 107, 82, 0.055) 25%, transparent 25%) 0 0 /
+      12px 12px,
+    #eee9dd;
+  box-shadow:
+    inset 0 1px 2px rgba(23, 36, 30, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.35);
   user-select: none;
 }
 
@@ -920,13 +927,18 @@ p {
   display: grid;
   aspect-ratio: 1;
   place-items: center;
-  border-radius: 9px;
-  background: var(--paper-strong);
-  color: var(--ink);
+  border-radius: 5px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.22)),
+    rgba(255, 253, 248, 0.74);
+  color: rgba(23, 36, 30, 0.86);
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: clamp(17px, 4vw, 24px);
-  font-weight: 700;
-  box-shadow: 0 1px 2px rgba(23, 36, 30, 0.05);
+  font-size: clamp(15px, 3.65vw, 20px);
+  font-weight: 650;
+  line-height: 1;
+  box-shadow:
+    inset 0 0 0 1px rgba(23, 36, 30, 0.075),
+    0 1px 1px rgba(23, 36, 30, 0.045);
 }
 
 .answer-form {
@@ -1453,14 +1465,14 @@ p {
   }
 
   .number-grid {
-    gap: 3px;
-    padding: 10px;
-    border-radius: 16px;
+    gap: 2px;
+    padding: 8px;
+    border-radius: 13px;
   }
 
   .number-grid span {
-    border-radius: 7px;
-    font-size: 17px;
+    border-radius: 4px;
+    font-size: 15px;
   }
 
   .challenge-content {
